@@ -200,9 +200,311 @@
   }
 </script>
 
+
+<!-- ===================== CHAPTER 5: Factors & Multiples ===================== -->
+<section id="chapter5" style="padding:20px;margin:20px;background:#fff;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.06);">
+  <h2 style="color:#1565c0;margin-top:0">Chapter 5: Factors & Multiples</h2>
+  <p>Learn how to find factors, multiples, and use them to solve problems like LCM (Least Common Multiple) and HCF/GCD (Highest Common Factor / Greatest Common Divisor).</p>
+
+  <div style="margin-top:12px;border:2px dashed #64b5f6;padding:12px;border-radius:10px;background:#f1f8ff">
+    <h3>🔎 Find Factors</h3>
+    <input type="number" id="fnum" placeholder="Enter number" style="padding:8px;border-radius:8px;border:2px solid #90caf9;width:110px">
+    <button onclick="findFactors()">Find Factors</button>
+    <p id="factorsResult" style="font-weight:600;margin-top:8px"></p>
+
+    <h3 style="margin-top:14px">📌 LCM & HCF</h3>
+    <p>Enter two numbers:</p>
+    <input type="number" id="l1" placeholder="Num 1" style="padding:8px;border-radius:8px;border:2px solid #90caf9;width:90px">
+    <input type="number" id="l2" placeholder="Num 2" style="padding:8px;border-radius:8px;border:2px solid #90caf9;width:90px;margin-left:8px">
+    <button onclick="calcLcmHcf()">Calculate LCM & HCF</button>
+    <p id="lcmhcfResult" style="font-weight:600;margin-top:8px"></p>
+  </div>
+</section>
+
+<!-- ===================== CHAPTER 6: Percentages & Ratios ===================== -->
+<section id="chapter6" style="padding:20px;margin:20px;background:#fff;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.06);">
+  <h2 style="color:#1565c0;margin-top:0">Chapter 6: Percentages & Ratios</h2>
+  <p>Understand percentages, convert them to decimals/fractions, and solve ratio problems used in real life.</p>
+
+  <div style="margin-top:12px;border:2px dashed #64b5f6;padding:12px;border-radius:10px;background:#f1f8ff">
+    <h3>📊 Percentage Converter</h3>
+    <input type="number" id="pctVal" placeholder="percent (e.g., 25)" style="padding:8px;border-radius:8px;border:2px solid #90caf9;width:120px">
+    <button onclick="pctConvert()">Convert</button>
+    <p id="pctResult" style="font-weight:600;margin-top:8px"></p>
+
+    <h3 style="margin-top:14px">⚖️ Ratio Problem</h3>
+    <p>Solve: If A:B = <input id="rA" style="width:50px;padding:6px;border-radius:6px;border:1px solid #ddd"> : <input id="rB" style="width:50px;padding:6px;border-radius:6px;border:1px solid #ddd"> and total is <input id="rTotal" style="width:80px;padding:6px;border-radius:6px;border:1px solid #ddd">, find A and B.</p>
+    <button onclick="solveRatio()">Solve Ratio</button>
+    <p id="ratioResult" style="font-weight:600;margin-top:8px"></p>
+  </div>
+</section>
+
+<!-- ===================== CHAPTER 7: Simple Equations ===================== -->
+<section id="chapter7" style="padding:20px;margin:20px;background:#fff;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.06);">
+  <h2 style="color:#1565c0;margin-top:0">Chapter 7: Simple Equations</h2>
+  <p>Learn to solve one-step and two-step linear equations — the foundation for algebra.</p>
+
+  <div style="margin-top:12px;border:2px dashed #64b5f6;padding:12px;border-radius:10px;background:#f1f8ff">
+    <h3>🔢 Solve a One-Step Equation</h3>
+    <p>Format: x + a = b  OR  x - a = b  OR  ax = b</p>
+    <input id="eqA" placeholder="Enter equation, e.g. x+5=12" style="width:220px;padding:8px;border-radius:8px;border:2px solid #90caf9">
+    <button onclick="solveEquation()">Solve</button>
+    <p id="eqResult" style="font-weight:600;margin-top:8px"></p>
+
+    <h3 style="margin-top:14px">🧩 Two-Step Practice</h3>
+    <p>Try: 2x + 3 = 11 (you can change numbers)</p>
+    <button onclick="twoStepDemo()">Show demo solution</button>
+    <p id="twoStepRes" style="font-weight:600;margin-top:8px"></p>
+  </div>
+</section>
+
+<!-- ===================== CHAPTER 8: Word Problems ===================== -->
+<section id="chapter8" style="padding:20px;margin:20px;background:#fff;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.06);">
+  <h2 style="color:#1565c0;margin-top:0">Chapter 8: Word Problems</h2>
+  <p>Apply arithmetic to real-life situations: money, time, distance, and sharing problems.</p>
+
+  <div style="margin-top:12px;border:2px dashed #64b5f6;padding:12px;border-radius:10px;background:#f1f8ff">
+    <h3>🧾 Example: Sharing Money</h3>
+    <p>Riya has ₹240. She shares it equally among 6 friends. How much does each get?</p>
+    <button onclick="wordDemo1()">Show Solution</button>
+    <p id="word1" style="font-weight:600;margin-top:8px"></p>
+
+    <h3 style="margin-top:12px">🎯 Challenge (Try yourself)</h3>
+    <p>Arun travels 90 km in 1.5 hours. What is his average speed (km/h)?</p>
+    <input type="number" id="speedAns" placeholder="Answer" style="padding:8px;border-radius:8px;border:2px solid #90caf9;width:120px">
+    <button onclick="checkSpeed()">Check</button>
+    <p id="speedRes" style="font-weight:600;margin-top:8px"></p>
+  </div>
+</section>
+
+<!-- ===================== CHAPTER 9: Mental Math & Tricks ===================== -->
+<section id="chapter9" style="padding:20px;margin:20px;background:#fff;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.06);">
+  <h2 style="color:#1565c0;margin-top:0">Chapter 9: Mental Math & Tricks</h2>
+  <p>Learn quick strategies for fast calculations — multiplying by 9, square tricks, doubling & halving, and estimation.</p>
+
+  <div style="margin-top:12px;border:2px dashed #64b5f6;padding:12px;border-radius:10px;background:#f1f8ff">
+    <h3>⚡ Multiply by 9 Trick</h3>
+    <p>Pick a number 1–10.</p>
+    <input type="number" min="1" max="10" id="nineIn" style="padding:8px;border-radius:8px;border:2px solid #90caf9;width:100px">
+    <button onclick="nineTrick()">Show trick</button>
+    <p id="nineRes" style="font-weight:600;margin-top:8px"></p>
+
+    <h3 style="margin-top:12px">🔢 Square a Number Ending with 5</h3>
+    <p>Example: 25² = ? (Use the trick)</p>
+    <input type="number" id="sq5" placeholder="e.g., 25" style="padding:8px;border-radius:8px;border:2px solid #90caf9;width:120px">
+    <button onclick="squareEnding5()">Compute</button>
+    <p id="sq5Res" style="font-weight:600;margin-top:8px"></p>
+  </div>
+</section>
+
+<!-- ===================== CHAPTER 10: Final Quiz & Certificate ===================== -->
+<section id="chapter10" style="padding:20px;margin:20px;background:#fff;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.06);margin-bottom:40px;">
+  <h2 style="color:#1565c0;margin-top:0">Chapter 10: Final Quiz & Certificate</h2>
+  <p>Test what you've learned and print a simple certificate of completion.</p>
+
+  <div style="margin-top:12px;border:2px dashed #64b5f6;padding:12px;border-radius:10px;background:#f1f8ff">
+    <h3>🧠 Final Quiz (5 questions)</h3>
+    <ol>
+      <li>What is the HCF of 12 and 18? <input type="number" id="qf1" style="width:80px;padding:6px;border-radius:6px"></li>
+      <li>What is 20% of 150? <input type="number" id="qf2" style="width:80px;padding:6px;border-radius:6px"></li>
+      <li>Solve for x: x + 7 = 15. <input type="number" id="qf3" style="width:80px;padding:6px;border-radius:6px"></li>
+      <li>Arun travels 120 km in 2 hours. Speed = ? <input type="number" id="qf4" style="width:80px;padding:6px;border-radius:6px"></li>
+      <li>What is 9 × 7? <input type="number" id="qf5" style="width:80px;padding:6px;border-radius:6px"></li>
+    </ol>
+    <button onclick="gradeFinal()">Submit Quiz</button>
+    <p id="finalScore" style="font-weight:700;margin-top:8px"></p>
+
+    <h3 style="margin-top:14px">🎓 Certificate of Completion</h3>
+    <label>Enter your name: <input type="text" id="certName" placeholder="Your name" style="padding:6px;border-radius:6px;border:1px solid #ccc"></label>
+    <button onclick="generateCertificate()">Show Certificate</button>
+
+    <div id="certificateBox" style="margin-top:12px;padding:12px;border:2px solid #333;border-radius:8px;background:#fff;display:none">
+      <div style="text-align:center">
+        <h3>Certificate of Completion</h3>
+        <p>This certifies that</p>
+        <h2 id="certDisplayName" style="margin:6px 0">Student</h2>
+        <p>has completed the Interactive Textbook on Arithmetic.</p>
+        <button onclick="window.print()">Print Certificate</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Chapter Scripts ===================== -->
+<script>
+  // ---- Chapter 5: Factors & LCM/HCF ----
+  function findFactors(){
+    const n = parseInt(document.getElementById('fnum').value);
+    const out = document.getElementById('factorsResult');
+    if(isNaN(n) || n<=0){ out.textContent = 'Enter a positive integer.'; return; }
+    const factors = [];
+    for(let i=1;i<=Math.floor(Math.sqrt(n));i++){
+      if(n % i === 0){
+        factors.push(i);
+        if(i !== n/i) factors.push(n/i);
+      }
+    }
+    factors.sort((a,b)=>a-b);
+    out.textContent = `Factors of ${n}: ${factors.join(', ')}`;
+  }
+
+  function gcd(a,b){
+    a = Math.abs(a); b = Math.abs(b);
+    while(b){ const t=a%b; a=b; b=t; }
+    return a;
+  }
+  function lcm(a,b){ return Math.abs(a*b)/gcd(a,b); }
+
+  function calcLcmHcf(){
+    const a = parseInt(document.getElementById('l1').value);
+    const b = parseInt(document.getElementById('l2').value);
+    const out = document.getElementById('lcmhcfResult');
+    if(isNaN(a) || isNaN(b) || a<=0 || b<=0){ out.textContent = 'Enter two positive integers.'; return; }
+    out.textContent = `HCF = ${gcd(a,b)} • LCM = ${lcm(a,b)}`;
+  }
+
+  // ---- Chapter 6: Percentages & Ratios ----
+  function pctConvert(){
+    const p = parseFloat(document.getElementById('pctVal').value);
+    const out = document.getElementById('pctResult');
+    if(isNaN(p)){ out.textContent='Enter a percent value.'; return; }
+    out.textContent = `${p}% = ${ (p/100).toFixed(4) } (decimal) = ${p}/100 (fraction)`;
+  }
+
+  function solveRatio(){
+    const A = parseFloat(document.getElementById('rA').value);
+    const B = parseFloat(document.getElementById('rB').value);
+    const total = parseFloat(document.getElementById('rTotal').value);
+    const out = document.getElementById('ratioResult');
+    if(isNaN(A)||isNaN(B)||isNaN(total)||A<0||B<0){ out.textContent='Enter valid numbers.'; return; }
+    const sum = A + B;
+    const aVal = (A/sum)*total;
+    const bVal = (B/sum)*total;
+    out.textContent = `A = ${aVal} , B = ${bVal}`;
+  }
+
+  // ---- Chapter 7: Simple Equations ----
+  function solveEquation(){
+    const eq = (document.getElementById('eqA').value||'').replace(/\s+/g,'');
+    const out = document.getElementById('eqResult');
+    if(!eq){ out.textContent='Enter an equation like x+5=12'; return; }
+    // Very simple parser for forms: x+5=12, x-3=4, 3x=12
+    try{
+      if(/^[xX]\+[0-9\-]+=[0-9\-]+$/.test(eq) || /^[xX]\-[0-9]+=[0-9\-]+$/.test(eq)){
+        // x + a = b  or x - a = b
+        const parts = eq.split('=');
+        const left = parts[0];
+        const b = parseFloat(parts[1]);
+        if(left.includes('+')){
+          const a = parseFloat(left.split('+')[1]);
+          const x = b - a;
+          out.textContent = `x = ${x}`;
+        } else if(left.includes('-')){
+          const a = parseFloat(left.split('-')[1]);
+          const x = b + a;
+          out.textContent = `x = ${x}`;
+        } else out.textContent='Unable to parse.';
+      } else if(/^[0-9]+[xX]=[0-9]+$/.test(eq) || /^[0-9]+[xX]\+[0-9]+=[0-9]+$/.test(eq) || /^[0-9]+[xX]\-[0-9]+=[0-9]+$/.test(eq)){
+        // forms like ax=b or ax+c=b
+        // handle ax=b
+        if(/^[0-9]+[xX]=[0-9]+$/.test(eq)){
+          const parts = eq.split('=');
+          const a = parseFloat(parts[0].slice(0,-1));
+          const b = parseFloat(parts[1]);
+          const x = b / a;
+          out.textContent = `x = ${x}`;
+        } else {
+          // fallback: try to replace x with a variable and use eval safely
+          const expr = eq.replace(/[xX]/g,'(x)');
+          // crude solve by trying numbers - since target audience small integers
+          let solved = false;
+          for(let i=-100;i<=100;i++){
+            const left = expr.split('=')[0].replace(/\(x\)/g, i);
+            const right = expr.split('=')[1].replace(/\(x\)/g, i);
+            if(eval(left) === eval(right)){ out.textContent = `x = ${i}`; solved=true; break; }
+          }
+          if(!solved) out.textContent='Could not solve — try a simpler form.';
+        }
+      } else {
+        out.textContent='Unsupported equation format. Try x+5=12 or 3x=12.';
+      }
+    }catch(e){ out.textContent='Error parsing equation.'; }
+  }
+
+  function twoStepDemo(){
+    // demo for 2x + 3 = 11
+    const res = (11 - 3)/2;
+    document.getElementById('twoStepRes').textContent = `2x + 3 = 11 → 2x = 8 → x = 4. (Demo)`;
+  }
+
+  // ---- Chapter 8: Word Problems ----
+  function wordDemo1(){
+    // Riya: ₹240 shared among 6 friends
+    document.getElementById('word1').textContent = `Each gets ₹${240/6} (₹40 each).`;
+  }
+  function checkSpeed(){
+    const ans = parseFloat(document.getElementById('speedAns').value);
+    const out = document.getElementById('speedRes');
+    const correct = 90/1.5; // from earlier example in conversation; but current problem: Arun 90 km in 1.5h — if using this example else check input
+    // For the challenge in this chapter we asked Arun 90 km in 1.5 hr earlier; here we used 90? but current problem uses 90 earlier; to support this chapter use the problem inside it: 90/1.5 = 60
+    const expected = 90/1.5;
+    if(isNaN(ans)){ out.textContent='Enter a number.'; return; }
+    if(Math.abs(ans-expected) < 0.1) out.textContent = `✅ Correct! Average speed = ${expected} km/h.`;
+    else out.textContent = `❌ Not quite. Correct answer is ${expected} km/h.`;
+  }
+
+  // ---- Chapter 9: Mental Math Tricks ----
+  function nineTrick(){
+    const n = parseInt(document.getElementById('nineIn').value);
+    const out = document.getElementById('nineRes');
+    if(isNaN(n) || n<1 || n>10){ out.textContent='Pick an integer 1–10.'; return; }
+    const prod = 9 * n;
+    // trick: 9*n = (n-1) | (10-(n-1)) as digits for 2-digit results 1..9 (works for 1..9)
+    const left = n-1; const right = 9 - left;
+    out.textContent = `9 × ${n} = ${prod}. Trick digits: ${left}${right}`;
+  }
+
+  function squareEnding5(){
+    const v = parseInt(document.getElementById('sq5').value);
+    const out = document.getElementById('sq5Res');
+    if(isNaN(v) || v%10 !==5){ out.textContent='Enter a number ending with 5 (e.g., 25).'; return; }
+    // trick: for XY5 where last digit 5, n = (n_without_5) ; e.g., 25 -> 2 then 2*(2+1)=6 then append 25 => 625
+    const s = String(v);
+    const prefix = parseInt(s.slice(0,-1));
+    const left = prefix * (prefix + 1);
+    out.textContent = `${v}² = ${left}${'25'}`;
+  }
+
+  // ---- Chapter 10: Final Quiz & Certificate ----
+  function gradeFinal(){
+    let score = 0;
+    const a1 = parseInt(document.getElementById('qf1').value);
+    const a2 = parseFloat(document.getElementById('qf2').value);
+    const a3 = parseInt(document.getElementById('qf3').value);
+    const a4 = parseFloat(document.getElementById('qf4').value);
+    const a5 = parseInt(document.getElementById('qf5').value);
+    if(a1 === 6) score++;
+    if(Math.abs(a2 - 30) < 0.1) score++;
+    if(a3 === 8) score++;
+    if(Math.abs(a4 - 60) < 0.1) score++;
+    if(a5 === 63) score++;
+    document.getElementById('finalScore').textContent = `You scored ${score}/5. ${score===5? 'Awesome! 🎉': 'Keep practicing!'}`;
+  }
+
+  function generateCertificate(){
+    const name = (document.getElementById('certName').value || 'Student').trim();
+    document.getElementById('certDisplayName').textContent = name;
+    document.getElementById('certificateBox').style.display = 'block';
+    // scroll into view
+    document.getElementById('certificateBox').scrollIntoView({behavior:'smooth'});
+  }
+
+  // Small utility: keep the chapter UI friendly on mobile (no action required)
+  (function(){ /* placeholder for future responsive tweaks */ })();
+</script>
+
 </body>
 </html>
-
 
 
 
