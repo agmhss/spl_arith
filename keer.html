@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Textbook on Arithmetic</title>
+<style>
+  body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f9f9f9, #e3f2fd);
+    color: #333;
+    scroll-behavior: smooth;
+  }
+  header {
+    background: linear-gradient(90deg, #2196f3, #64b5f6);
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    border-radius: 0 0 20px 20px;
+  }
+  h1 {
+    margin: 0;
+  }
+  section {
+    padding: 20px;
+    margin: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  h2 {
+    color: #1565c0;
+  }
+  button {
+    background: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+  }
+  button:hover {
+    background: #0d47a1;
+  }
+  input[type="number"], input[type="text"] {
+    padding: 8px;
+    border: 2px solid #90caf9;
+    border-radius: 8px;
+    width: 80px;
+    text-align: center;
+  }
+  .quiz-question {
+    margin-bottom: 10px;
+  }
+  .result {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .activity-box {
+    border: 2px dashed #64b5f6;
+    padding: 10px;
+    border-radius: 10px;
+    background: #f1f8ff;
+    margin-top: 15px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📘 Interactive Textbook on Arithmetic</h1>
+  <p>For Ages 10–15 | Learn Math with Fun and Interactivity!</p>
+</header>
+
+<section id="chapter1">
+  <h2>Chapter 1: Numbers Around Us</h2>
+  <p>Numbers are everywhere — in clocks, money, distances, and even games! Arithmetic is the foundation of mathematics. Let’s start exploring how numbers work.</p>
+  
+  <div class="activity-box">
+    <h3>🔢 Activity: Identify the Type of Number</h3>
+    <p>Enter a number and I’ll tell you if it’s even or odd!</p>
+    <input type="number" id="numCheck" placeholder="Enter number">
+    <button onclick="checkNumber()">Check</button>
+    <p id="numResult" class="result"></p>
+  </div>
+</section>
+
+<section id="chapter2">
+  <h2>Chapter 2: Addition and Subtraction</h2>
+  <p>Adding joins quantities together. Subtracting finds what’s left. Let’s practice!</p>
+  
+  <div class="activity-box">
+    <h3>➕ Quick Math Challenge</h3>
+    <p id="addQ"></p>
+    <input type="number" id="addA" placeholder="Your answer">
+    <button onclick="checkAdd()">Submit</button>
+    <p id="addR" class="result"></p>
+  </div>
+</section>
+
+<section id="chapter3">
+  <h2>Chapter 3: Multiplication and Division</h2>
+  <p>Multiplication is repeated addition, and division splits things equally. These are essential arithmetic operations.</p>
+
+  <div class="activity-box">
+    <h3>✖️ Practice Multiplication</h3>
+    <p id="mulQ"></p>
+    <input type="number" id="mulA" placeholder="Answer">
+    <button onclick="checkMul()">Submit</button>
+    <p id="mulR" class="result"></p>
+  </div>
+</section>
+
+<section id="chapter4">
+  <h2>Chapter 4: Fractions and Decimals</h2>
+  <p>Fractions and decimals represent parts of a whole. They help us express smaller quantities precisely.</p>
+
+  <div class="activity-box">
+    <h3>🍰 Convert Fraction to Decimal</h3>
+    <p>Enter numerator and denominator:</p>
+    <input type="number" id="num" placeholder="Numerator"> /
+    <input type="number" id="den" placeholder="Denominator">
+    <button onclick="fractionToDecimal()">Convert</button>
+    <p id="fracResult" class="result"></p>
+  </div>
+</section>
+
+<section id="quiz">
+  <h2>🧠 Final Quiz: Test Your Arithmetic Skills</h2>
+  <div class="quiz-question">
+    <p>1️⃣ What is 25 + 35?</p>
+    <input type="number" id="q1">
+  </div>
+  <div class="quiz-question">
+    <p>2️⃣ What is 8 × 7?</p>
+    <input type="number" id="q2">
+  </div>
+  <div class="quiz-question">
+    <p>3️⃣ What is half of 60?</p>
+    <input type="number" id="q3">
+  </div>
+  <button onclick="checkQuiz()">Submit Quiz</button>
+  <p id="quizResult" class="result"></p>
+</section>
+
+<script>
+  // Chapter 1 Activity
+  function checkNumber() {
+    const n = parseInt(document.getElementById("numCheck").value);
+    if (isNaN(n)) return document.getElementById("numResult").textContent = "Please enter a number!";
+    document.getElementById("numResult").textContent = n % 2 === 0 ? n + " is even!" : n + " is odd!";
+  }
+
+  // Addition Quiz
+  let a = Math.floor(Math.random() * 20);
+  let b = Math.floor(Math.random() * 20);
+  document.getElementById("addQ").textContent = `What is ${a} + ${b}?`;
+
+  function checkAdd() {
+    const ans = parseInt(document.getElementById("addA").value);
+    document.getElementById("addR").textContent = ans === a + b ? "✅ Correct!" : "❌ Try again.";
+  }
+
+  // Multiplication
+  let x = Math.floor(Math.random() * 10);
+  let y = Math.floor(Math.random() * 10);
+  document.getElementById("mulQ").textContent = `What is ${x} × ${y}?`;
+
+  function checkMul() {
+    const ans = parseInt(document.getElementById("mulA").value);
+    document.getElementById("mulR").textContent = ans === x * y ? "✅ Perfect!" : "❌ Incorrect, try again!";
+  }
+
+  // Fraction to Decimal
+  function fractionToDecimal() {
+    const num = parseFloat(document.getElementById("num").value);
+    const den = parseFloat(document.getElementById("den").value);
+    if (isNaN(num) || isNaN(den) || den === 0)
+      return document.getElementById("fracResult").textContent = "Please enter valid numbers.";
+    const dec = (num / den).toFixed(2);
+    document.getElementById("fracResult").textContent = `Decimal value = ${dec}`;
+  }
+
+  // Final Quiz
+  function checkQuiz() {
+    let score = 0;
+    if (parseInt(document.getElementById("q1").value) === 60) score++;
+    if (parseInt(document.getElementById("q2").value) === 56) score++;
+    if (parseInt(document.getElementById("q3").value) === 30) score++;
+    document.getElementById("quizResult").textContent = `You scored ${score}/3 ${score === 3 ? "🌟 Excellent!" : "👍 Keep practicing!"}`;
+  }
+</script>
+
+</body>
+</html>
